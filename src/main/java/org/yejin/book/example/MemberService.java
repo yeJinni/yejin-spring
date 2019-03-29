@@ -1,4 +1,4 @@
-package org.yejin.book.chap03;
+package org.yejin.book.example;
 
 public class MemberService {
 	MemberDao memberDao;
