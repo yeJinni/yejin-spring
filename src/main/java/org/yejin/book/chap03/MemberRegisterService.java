@@ -18,9 +18,12 @@ public class MemberRegisterService {
 	/**
 	 * memberDao를 초기화하는 컨스트럭터
 	 */
-	public MemberRegisterService(MemberDao memberDao) {
+	public void setMemberDao(MemberDao memberDao) {
 		this.memberDao = memberDao;
 	}
+	/* public MemberRegisterService(MemberDao memberDao) {
+		this.memberDao = memberDao;
+	} */
 
 	/**
 	 * 회원 등록
