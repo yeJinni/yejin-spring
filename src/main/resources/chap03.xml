@@ -7,19 +7,21 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-	<!-- Greeter greeter = new org.yejin.book.chap02.Greeter() -->
-	<bean id="greeter" class="org.yejin.book.chap02.Greeter" />
+	<bean id="memberDao" class="org.yejin.book.chap03.MemberDao" />
+
+	<!-- dependency injection by constructor -->
+	<!--  
+	<bean id="memberRegisterService"
+		class="org.yejin.book.chap03.MemberRegisterService">
+		<constructor-arg ref="memberDao" />
+	</bean>
+	-->
+
+	<!-- dependency injection by setter -->
 	
-	<bean id="memberDao" class="org.yejin.book.example.MemberDao" />
-
-	<bean id="articleService"
-		class="org.yejin.book.example.ArticleService">
-		<property name="memberDao" ref="memberDao" />
+	<bean id="memberRegisterService"
+		class="org.yejin.book.chap03.MemberRegisterService">
+		<property name="memberDao" ref="memberDao"/>
 	</bean>
-
-	<bean id="memberService"
-		class="org.yejin.book.example.MemberService">
-		<property name="memberDao" ref="memberDao" />
-	</bean>
-
+	
 </beans>
