@@ -33,17 +33,17 @@ public class MemberService {
 	}
 
 	public void updateMember() {
-		Member member = memberDao.selectByEmail("skyrocket0240@naver.com");
-		member.setPassword("yj102030!^^");
+		Member member = memberDao.selectByEmail("skyrocket@naver.com");
+		member.setPassword("sdfggd");
 		memberDao.update(member);
 		logger.debug("Update complete.");
 	}
 
 	public void insertMember() {
 		Member member = new Member();
-		member.setEmail("parkyj220@naver.com");
-		member.setPassword("yj102030!^^");
-		member.setName("박예진진");
+		member.setEmail("skyrocket99@naver.com");
+		member.setPassword("dfhdh7");
+		member.setName("예진과제");
 		memberDao.insert(member);
 		logger.debug("Insert complete.");
 	}
